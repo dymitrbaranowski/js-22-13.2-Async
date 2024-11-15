@@ -11,14 +11,24 @@
 //    - stack
 //  - Блок catch без объекта ошибки
 
-try {
-  console.log('Внутри try до myVar');
+setTimeout(() => {
+  try {
+    myVar;
+  } catch (error) {
+    console.log('Ошибка');
+  }
+}, 1000);
 
-  myVar;
+console.log('После try... Catch');
 
-  console.log('Внутри try после myVar');
-} catch (error) {
-  console.log('Ошибка!');
-}
+// try {
+//   console.log('Внутри try до myVar');
 
-console.log('После try...catch');
+//   myVar;
+
+//   console.log('Внутри try после myVar');
+// } catch (error) {
+//   console.log('Ошибка!');
+// }
+
+// console.log('После try...catch');
